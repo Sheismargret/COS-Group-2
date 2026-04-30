@@ -1,18 +1,38 @@
+import '../styles/Register.css';
 import React, { useState } from 'react';
 
 const Register = () => {
     return (
-        <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Register</h2>
-            <form style={{ display: 'flex', flexDirection: 'column', width: '300px', margin: '0 auto', gap: '10px' }}>
-                <input type="text" placeholder="Full Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Confirm Password" />
-                <button type="submit">Sign Up</button>
+    <div className="auth-wrapper">
+        <div className="auth-card">
+            <div className="auth-header">
+                <h2>Create Account</h2>
+            </div>
+            <form className="auth-form">
+                <div className="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required />
+                </div>
+                <div className="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="example@pau.edu.ng" required />
+                </div>
+                <div className="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password" required />
+                </div>
+                <div className="input-group">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Repeat your password" required />
+                </div>
+                <button type="submit" className="auth-btn">Sign Up</button>
             </form>
+            <div className="auth-footer">
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
         </div>
-    );
+    </div>
+);
 };
 
 export default Register;
