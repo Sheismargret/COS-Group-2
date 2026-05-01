@@ -1,5 +1,6 @@
 import '../styles/Register.css';
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';*/
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
@@ -28,7 +29,7 @@ const Register = () => {
                 <button type="submit" className="auth-btn">Sign Up</button>
             </form>
             <div className="auth-footer">
-                <p>Already have an account? <a href="/login">Login here</a></p>
+                <p>Already have an account? <Link to="/Login">Login here</Link></p>
             </div>
         </div>
     </div>
