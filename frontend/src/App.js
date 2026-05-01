@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Navbar from './components/Navbar';
 import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import './App.css';
 
-const Home = () => <div className="page-container"><h1>🏠 Home Page</h1></div>;
+
 
 function App() {
   return (

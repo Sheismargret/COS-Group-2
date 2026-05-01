@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="nav-logo">PAU Connect</div>
+            <div className="nav-logo">
+                <Link to="/">PAU Connect</Link>
+            </div>
+
             <ul className="nav-links">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/Login">Login</Link></li>

@@ -13,6 +13,10 @@
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.nav-logo a {
+    text-decoration: none;
     color: #007bff;
 }
 
