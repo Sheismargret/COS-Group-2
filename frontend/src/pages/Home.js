@@ -1,3 +1,6 @@
+
+import { Link } from 'react-router-dom';
+
 function Home() {
   return (
     <div className="home-content">
@@ -13,7 +16,7 @@ function Home() {
         </p>
         
         <div className="button-row">
-          <button className="primary-btn">Find Jobs</button>
+          <Link to="/FindJobs" className="primary-btn">Find Jobs</Link>
           <button className="secondary-btn">Post a Job</button>
         </div>
       </div>
