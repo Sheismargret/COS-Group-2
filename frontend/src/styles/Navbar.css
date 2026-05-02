@@ -2,13 +2,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.35rem 5%;
+    padding: 14px 5%;
     background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10; /* Ensures it stays above other elements */
+
+    -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%); /* Feathers out the bottom edge */
+    mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
+}
+
+.navbar {
+  backdrop-filter: blur(10px); /* Blurs whatever is behind it */
 }
 
 .nav-logo {
@@ -53,6 +60,3 @@
     background-color: #0056b3;
 }
 
-.navbar {
-  backdrop-filter: blur(10px); /* Blurs whatever is behind it */
-}

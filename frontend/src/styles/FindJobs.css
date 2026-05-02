@@ -1,16 +1,17 @@
 .find-jobs-container {
-  padding: 100px 8% 50px; /* Padding for the fixed navbar */
+  padding: 80px 8% 50px; /* Padding for the fixed navbar */
   background-color: #f8fafc;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 /* Header Section */
 .jobs-header {
   background: white;
-  padding: 40px;
-  border-radius: 15px;
+  padding: 30px;
+  border-radius: 25px;
   border: 1px solid #e2e8f0;
   margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.3);
 }
 
 .search-bar-container {
@@ -23,18 +24,34 @@
   flex: 1;
   padding: 15px;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border-radius: 25px;
   background: #f8fafc;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar-container input:focus {
+  outline: none;
+  border-color: #007bff; /* PAU Blue or similar */
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
 .search-btn {
-  background: #10b981;
+  background: #007bff;
   color: white;
   border: none;
   padding: 0 30px;
-  border-radius: 10px;
+  border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+    
+.search-btn:hover {
+  background: #006adc;
+  box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+  transition: all 0.3s ease-in-out;
+  
 }
 
 /* Layout */
@@ -64,10 +81,14 @@
   padding: 25px;
   border-radius: 15px;
   border: 1px solid #e2e8f0;
-  transition: transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.job-card:hover { transform: translateY(-5px); }
+.job-card:hover { 
+transform: translateY(-5px); 
+box-shadow: 0 0 30px rgba(52, 152, 219, 0.3);
+transition: all 0.3s ease-in-out;
+}
 
 .job-card-header { display: flex; gap: 15px; margin-bottom: 15px; }
 
@@ -92,3 +113,47 @@
 
 .job-tags .type-tag { background: #ecfdf5; color: #10b981; margin-left: auto; }
 .job-tags .remote { background: #f0fdfa; color: #0d9488; }
+
+/* ... keep previous styles, add these ... */
+
+.job-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 10px 0;
+}
+
+.job-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.type-tag.remote {
+  background: #f0fdfa;
+  color: #0d9488;
+}
+
+.type-tag.contract {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.type-tag.full-time {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Sidebar Hover Effects */
+.filter-group li {
+  padding: 5px 0;
+  transition: color 0.2s;
+  font-size: 0.9rem;
+}
+
+.filter-group li:hover {
+  color: #10b981;
+  font-weight: 500;
+}
