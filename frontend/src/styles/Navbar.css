@@ -3,11 +3,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 5%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
+    background-color: transparent;
+    position: absolute;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Ensures it stays above other elements */
 }
 
 .nav-logo {
@@ -28,7 +29,7 @@
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #535659;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -41,9 +42,17 @@
     padding: 0.5rem 1rem;
     background-color: #007bff;
     color: #fff !important;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: translateY(0);
 }
 .btn-link:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect */
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar {
+  backdrop-filter: blur(10px); /* Blurs whatever is behind it */
 }

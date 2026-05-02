@@ -4,8 +4,8 @@ function Home() {
       {/* Hero Section */}
       <div className="hero-section">
         <p className="badge-text">Thousands of opportunities waiting for you</p>
-        <h1>Find your <span className="blue-text">Dream Job</span> 
-            <br />or <span className="blue-text">perfect Hire</span>
+        <h1>Find your <span className="blue-text">Dream Job</span> or 
+            <br /><span className="blue-text">perfect Hire</span>
         </h1>
         <p className="sub-text">
           Connect talented professionals with innovative companies. 
