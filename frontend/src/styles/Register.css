@@ -12,7 +12,7 @@
 .auth-card {
     background: #ffffff;
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
@@ -59,7 +59,7 @@
 .input-group input {
     padding: 12px;
     border: 1.5px solid #ddd;
-    border-radius: 6px;
+    border-radius: 25px;
     font-size: 15px;
     transition: border-color 0.3s ease;
 }
@@ -67,6 +67,8 @@
 .input-group input:focus {
     outline: none;
     border-color: #007bff; /* PAU Blue or similar */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+    transition: all 0.4s ease-in-out;
 }
 
 /* The Button */
@@ -75,16 +77,22 @@
     color: white;
     padding: 12px;
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease-in-out;
+    transform: translateY(0);
 }
 
 .auth-btn:hover {
     background-color: #0056b3;
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+    transform: translateY(-2px); /* Slight lift effect */
+    transition: all 0.4s ease-in-out;
 }
 
 .auth-footer {

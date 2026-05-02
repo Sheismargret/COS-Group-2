@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 5%;
+    padding: 0.35rem 5%;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -31,11 +31,12 @@
     text-decoration: none;
     color: #535659;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
     color: #007bff;
+    text-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
 }
 
 .btn-link {
@@ -44,13 +45,12 @@
     color: #fff !important;
     border-radius: 25px;
     box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    transform: translateY(0);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
 }
 .btn-link:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Slight lift effect */
-    transition: all 0.4s ease-in-out;
 }
 
 .navbar {

@@ -3,7 +3,7 @@ function Home() {
     <div className="home-content">
       {/* Hero Section */}
       <div className="hero-section">
-        <p className="badge-text">Thousands of opportunities waiting for you</p>
+        <p className="badge-text"><h3>Thousands of opportunities waiting for you</h3></p>
         <h1>Find your <span className="blue-text">Dream Job</span> or 
             <br /><span className="blue-text">perfect Hire</span>
         </h1>
