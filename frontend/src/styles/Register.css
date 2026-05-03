@@ -3,8 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #f0f2f5; /* Light grey background */
+    min-height: 106vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -13,7 +12,7 @@
     background: #ffffff;
     padding: 40px;
     border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+     box-shadow: 0 0 30px rgba(52, 152, 219, 0.3);
     width: 100%;
     max-width: 400px;
 }
@@ -25,7 +24,7 @@
 
 .auth-header h2 {
     margin: 0;
-    color: #1a1a1a;
+    color: #2c3e50;
     font-size: 40px;
 }
 
