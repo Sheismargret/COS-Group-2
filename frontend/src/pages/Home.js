@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -36,7 +37,8 @@ function Home() {
           <p>Jobs Posted Monthly</p>
         </div>
       </div>
-    </div>
+      <Footer />
+    </div> 
   );
 }
 
