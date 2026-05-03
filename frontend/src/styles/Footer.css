@@ -1,0 +1,59 @@
+.pau-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #eef2f6;
+  padding: 80px 20px 40px;
+  font-family: 'Inter', sans-serif; /* Standard tech font */
+  color: #334155;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Matching the Logo Style */
+.footer-logo {
+  color: #007bff; /* The blue from your teammate's buttons */
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.footer-logo span {
+  color: #1e293b;
+}
+
+.footer-brand { flex: 2; max-width: 400px; }
+.footer-links, .footer-contact { flex: 1; min-width: 200px; }
+
+.footer-wrap h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.footer-wrap ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-wrap li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-wrap li:hover {
+  color: #007bff;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
