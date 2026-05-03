@@ -25,7 +25,7 @@ const Login = () => {
         console.log("Logging in with:", loginData);
         
         // After "login", you could redirect the user to a home or dashboard
-        // navigate('/home'); 
+        navigate('/'); 
     };
 
     return (

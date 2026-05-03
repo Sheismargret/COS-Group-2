@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Added for seamless navigation
+import { Link, useNavigate } from 'react-router-dom'; // Added for seamless navigation
 import '../styles/Register.css';
 
 const Register = () => {
     // State to keep track of user input
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -23,6 +25,7 @@ const Register = () => {
         e.preventDefault();
         // Add your logic here for what happens when the form is submitted
         console.log("Registration Data:", formData);
+        navigate('/Login'); // Redirect to login page after registration
     };
 
     return (

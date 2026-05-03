@@ -38,12 +38,12 @@
     text-decoration: none;
     color: #535659;
     font-weight: 500;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
     color: #007bff;
-    text-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
+    text-shadow: 0 0 25px rgba(52, 152, 219, 0.9); 
 }
 
 .btn-link {
@@ -53,10 +53,11 @@
     border-radius: 25px;
     box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
 }
 .btn-link:hover {
     background-color: #0056b3;
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
 }
 
