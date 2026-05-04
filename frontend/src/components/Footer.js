@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="pau-footer">
       <div className="footer-wrap">
         <div className="footer-brand">
-          <h2 className="footer-logo">PAU<span> Connect</span></h2>
+          <h2 className="footer-logo">PAU Connect</h2>
           <p>Connecting talent from Pan-Atlantic University with multinational opportunities.</p>
         </div>
 

@@ -2,7 +2,6 @@
   background-color: #ffffff;
   border-top: 1px solid #eef2f6;
   padding: 80px 20px 40px;
-  font-family: 'Inter', sans-serif; /* Standard tech font */
   color: #334155;
 }
 
@@ -17,12 +16,9 @@
 
 /* Matching the Logo Style */
 .footer-logo {
-  color: #007bff; /* The blue from your teammate's buttons */
-  font-weight: 800;
+  color: #007bff;
+  font-weight: 700;
   margin-bottom: 15px;
-}
-.footer-logo span {
-  color: #1e293b;
 }
 
 .footer-brand { flex: 2; max-width: 400px; }
@@ -30,7 +26,7 @@
 
 .footer-wrap h3 {
   font-size: 1.1rem;
-  color: #0f172a;
+  color: #2c3e50;
   margin-bottom: 20px;
 }
 
