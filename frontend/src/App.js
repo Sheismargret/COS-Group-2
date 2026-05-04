@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import FindJobs from './pages/FindJobs.js';
+import PostJob from './pages/PostJob.js';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/FindJobs" element={<FindJobs />} />
+        <Route path="/PostJob" element={<PostJob />} />
       </Routes>
     </div>
   );

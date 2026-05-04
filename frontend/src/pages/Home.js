@@ -18,7 +18,7 @@ function Home() {
         
         <div className="button-row">
           <Link to="/FindJobs" className="primary-btn">Find Jobs</Link>
-          <button className="secondary-btn">Post a Job</button>
+          <Link to="/PostJob" className="secondary-btn">Post a job</Link>
         </div>
       </div>
 
