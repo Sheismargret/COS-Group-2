@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute.js';
 import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import FindJobs from './pages/FindJobs.js';
@@ -14,6 +15,24 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
+
+        {/* PROTECTED ROUTES */}
+  <Route 
+    path="/FindJobs"
+    element={
+      <ProtectedRoute>
+        <FindJobs />
+      </ProtectedRoute>
+    } 
+  />
+  <Route 
+    path="/PostJob" 
+    element={
+      <ProtectedRoute>
+        <PostJob />
+      </ProtectedRoute>
+    } 
+  />
         <Route path="/Register" element={<Register />} />
         <Route path="/FindJobs" element={<FindJobs />} />
         <Route path="/PostJob" element={<PostJob />} />

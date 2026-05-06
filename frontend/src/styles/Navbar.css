@@ -46,7 +46,7 @@
     text-shadow: 0 0 25px rgba(52, 152, 219, 0.9); 
 }
 
-.btn-link {
+.Register-btn {
     padding: 0.5rem 1rem;
     background-color: #007bff;
     color: #fff !important;
@@ -56,8 +56,25 @@
     transition: all 0.2s ease-in-out;
 
 }
-.btn-link:hover {
+.Register-btn:hover {
     background-color: #0056b3;
     box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
 }
 
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #dc2626;
+    color: #fff !important;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.logout-btn:hover {
+    background-color: #b91c1c;
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.9);
+}

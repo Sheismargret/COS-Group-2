@@ -1,70 +1,71 @@
 import React, { useState } from 'react'; 
-import '../styles/Register.css';
+import '../styles/Login.css';
 import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate for redirection
 
-const Login = () => {
-    const navigate = useNavigate();
-    
-    // State to track email and password inputs
-    const [loginData, setLoginData] = useState({
-        email: '',
-        password: ''
-    });
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  
+  const navigate = useNavigate();
 
-    // Updates state whenever a user types
-    const handleChange = (e) => {
-        setLoginData({
-            ...loginData,
-            [e.target.name]: e.target.value
-        });
-    };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setError('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would normally validate with a backend
-        console.log("Logging in with:", loginData);
-        
-        // After "login", you could redirect the user to a home or dashboard
-        navigate('/'); 
-    };
+    // Simulated login logic
+    if (email === "user@hirehub.com" && password === "password123") {
+      localStorage.setItem('userToken', 'secure-jwt-string');
+      navigate('/FindJobs');
+    } else {
+      setError('Invalid email or password. Please try again.');
+    }
+  };
 
-    return (
-        <div className="auth-wrapper">
-            <div className="auth-card">
-                <div className="auth-header">
-                    <h2>Sign in</h2>
-                </div>
-                <form className="auth-form" onSubmit={handleSubmit}>
-                    <div className="input-group">
-                        <label>Email Address</label>
-                        <input 
-                            type="email" 
-                            name="email" // Added name to match state key
-                            placeholder="example@pau.edu.ng" 
-                            value={loginData.email}
-                            onChange={handleChange}
-                            required 
-                        />
-                    </div>
-                    <div className="input-group">
-                        <label>Password</label>
-                        <input 
-                            type="password" 
-                            name="password" // Added name to match state key
-                            placeholder="Enter password" 
-                            value={loginData.password}
-                            onChange={handleChange}
-                            required 
-                        />
-                    </div>
-                    <button type="submit" className="auth-btn">Login</button>
-                </form>
-                <div className="auth-footer">
-                    <p>Don't have an account? <Link to="/register">Create an account</Link></p>
-                </div>
-            </div>
+  return (
+    <div className="auth-wrapper">
+      <div className="auth-card">
+        <div className="auth-header">
+          <h2>Welcome Back!</h2>
+          <p>Enter your credentials to access your account</p>
         </div>
-    );
-};
+
+        <form className="auth-form" onSubmit={handleLogin}>
+          {error && <div className="error-message">{error}</div>}
+
+          <div className="input-group">
+            <label>Email Address</label>
+            <input 
+              type="email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)} 
+              placeholder="e.g. example@pau.edu.ng"
+              required
+            />
+          </div>
+
+          <div className="input-group">
+            <label>Password</label>
+            <input 
+              type="password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)} 
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" className="auth-btn">
+            Login to Account
+          </button>
+        </form>
+
+        <div className="auth-footer">
+          Don't have an account? <Link to="/register">Sign Up</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Login;

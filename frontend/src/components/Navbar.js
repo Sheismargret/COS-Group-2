@@ -1,8 +1,18 @@
 import React from 'react';
 import '../styles/Navbar.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+    
+    // Check if the user is logged in
+    const isAuthenticated = localStorage.getItem('userToken'); 
+
+    const handleLogout = () => {
+        localStorage.removeItem('userToken'); // Clear the session
+        navigate('/Login'); // Redirect to login page
+    };
+
     return (
         <nav className="navbar">
             <div className="nav-logo">
@@ -10,9 +20,24 @@ const Navbar = () => {
             </div>
 
             <ul className="nav-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/Login">Login</Link></li>
-                <li> <Link to="/Register" className="btn-link">Register</Link></li>
+                
+                {isAuthenticated ? (
+                    /* --- Logged In State --- */
+                    <>
+                        <li><Link to="/profile">Profile</Link></li>
+                        <li>
+                            <button onClick={handleLogout} className="logout-btn">
+                                Log out
+                            </button>
+                        </li>
+                    </>
+                ) : (
+                    /* --- Logged Out State --- */
+                    <>
+                        <li><Link to="/Login">Login</Link></li>
+                        <li><Link to="/Register" className="Register-btn">Register</Link></li>
+                    </>
+                )}
             </ul>
         </nav>
     );

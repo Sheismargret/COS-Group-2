@@ -1,0 +1,122 @@
+
+
+/* Container to center everything on the screen */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The white card containing the form */
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 32px; /* Slightly adjusted for "Welcome Back" sizing */
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Form Layout */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    text-align: left;
+}
+
+.input-group input {
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Error Message - Styled to match the auth-card aesthetic */
+.error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid #fecaca;
+}
+
+/* The Button */
+.auth-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease-in-out;
+}
+
+.auth-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+    transform: translateY(-2px);
+}
+
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
