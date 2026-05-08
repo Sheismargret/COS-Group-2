@@ -1,0 +1,116 @@
+/* Layout containers */
+
+.home-content {
+  padding: 70px 10%;
+  text-align: center;
+  background-image: radial-gradient(circle at top right, rgba(52, 152, 219, 0.15), transparent 40%);
+  min-height: 100vh;
+}
+
+.badge-text {
+  color: #2c3e50; /* Dark Navy */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.hero-section {
+  padding: 60px 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 4rem; 
+  font-weight: 700; 
+  color: #2c3e50;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.blue-text {
+  color: #007bff;
+}
+
+.sub-text {
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
+.primary-btn {
+  background: #007bff;
+  color: #fff !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease-in-out;
+  transform: translateY(0); /* Explicitly set starting position */
+}
+.primary-btn:hover {
+  /* Making it glow brighter when you hover over it */
+  background: #006adc;
+  box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+  transform: translateY(-2px); /* Slight lift effect */
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #007bff !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: 2px solid #81beff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0); /* Explicitly set starting position */
+}
+
+.secondary-btn:hover {
+  /* Making it glow brighter when you hover over it */
+  box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+  transform: translateY(-2px); /* Moves up */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Stats */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.stat-box {
+  background: white;
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: translateY(0); /* Explicitly set starting position */
+}
+
+.stat-box:hover {
+  transform: translateY(-5px); /* Interaction contrast */
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-5px); /* Moves up */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
