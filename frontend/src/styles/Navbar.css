@@ -29,15 +29,17 @@
 }
 
 .nav-links {
-    display: flex;
+    display: inline-flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #535659;
     font-weight: 500;
+    align-items: center;
     transition: all 0.2s ease-in-out;
 }
 
@@ -47,13 +49,17 @@
 }
 
 .Register-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     background-color: #007bff;
+    border: none;
     color: #fff !important;
     border-radius: 25px;
     box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
 
 }
 .Register-btn:hover {
@@ -62,12 +68,12 @@
 }
 
 .logout-btn {
-    padding: 0.5rem 1rem;
-    background-color: #dc2626;
+    padding: 0.7rem 1rem;
     color: #fff !important;
+    background-color: #f11818;
     border-radius: 25px;
     box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
-    border: none;
+    border: 0cap solid #df6767;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-weight: 600;
@@ -75,6 +81,6 @@
 }
 
 .logout-btn:hover {
-    background-color: #b91c1c;
+    background-color: #f45e5e;
     box-shadow: 0 0 25px rgba(220, 38, 38, 0.9);
 }

@@ -14,7 +14,7 @@ function Login() {
     setError('');
 
     // Simulated login logic
-    if (email === "user@hirehub.com" && password === "password123") {
+    if (email === "user@pau.com" && password === "password123") {
       localStorage.setItem('userToken', 'secure-jwt-string');
       navigate('/FindJobs');
     } else {

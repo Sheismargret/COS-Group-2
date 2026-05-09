@@ -35,7 +35,12 @@ const Navbar = () => {
                     /* --- Logged Out State --- */
                     <>
                         <li><Link to="/Login">Login</Link></li>
-                        <li><Link to="/Register" className="Register-btn">Register</Link></li>
+                        <button 
+                        className="Register-btn" 
+                        onClick={() => navigate('/Register')}
+                    >
+                        Register
+                    </button>
                     </>
                 )}
             </ul>
