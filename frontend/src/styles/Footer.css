@@ -1,55 +1,65 @@
-.pau-footer {
-  background-color: #ffffff;
-  border-top: 1px solid #eef2f6;
-  padding: 80px 20px 40px;
-  color: #334155;
-}
 
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1100px;
+.footer-row {
+  display: flex !important;   /* THE MAGIC LINE: Forces side-by-side */
+  flex-direction: row;        /* Ensures it's a row, not a column */
+  justify-content: space-between; 
+  align-items: flex-start;
+  max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 40px;
 }
 
-/* Matching the Logo Style */
-.footer-logo {
-  color: #007bff;
-  font-weight: 700;
-  margin-bottom: 15px;
+.footer-col {
+  flex: 1;                    /* Gives each column equal width */
+  min-width: 250px;           /* Prevents them from getting too squashed */
+  padding: 0 20px;
 }
 
-.footer-brand { flex: 2; max-width: 400px; }
-.footer-links, .footer-contact { flex: 1; min-width: 200px; }
-
-.footer-wrap h3 {
-  font-size: 1.1rem;
-  color: #2c3e50;
+.footer-brand {
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-.footer-wrap ul {
-  list-style: none;
-  padding: 0;
+.col-title {
+  font-size: 18px;
+  color: #63b3ed;            /* Light blue for headings */
+  margin-bottom: 25px;
 }
 
-.footer-wrap li {
+.footer-list {
+  list-style: none !important; /* Removes those annoying dots */
+  padding: 0 !important;
+  margin: 0;
+}
+
+.footer-list li {
   margin-bottom: 12px;
-  cursor: pointer;
-  transition: color 0.3s;
 }
 
-.footer-wrap li:hover {
+.footer-list a {
+  color: #131516;
+  text-decoration: none;
+}
+
+.footer-list a:hover {
   color: #007bff;
+  text-decoration: underline;
 }
 
-.footer-copy {
+.footer-text {
+  color: #131516;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-bottom-bar {
   text-align: center;
   margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #f1f5f9;
-  font-size: 0.9rem;
-  color: #94a3b8;
+  padding-top: 30px;
+  border-top: 1px solid #ffffff;
+  color: #718096;
+  font-size: 13px;
+}
+
+.blue-text {
+  color: #3b82f6;
 }
