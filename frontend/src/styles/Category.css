@@ -42,6 +42,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
 }
 
@@ -64,7 +65,7 @@
 }
 
 .category-arrow {
-  color: #10b981; /* The green arrow */
+  color: #10b981; 
   font-size: 20px;
   font-weight: bold;
 }
