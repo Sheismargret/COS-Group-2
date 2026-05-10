@@ -64,7 +64,8 @@
 }
 .Register-btn:hover {
     background-color: #0056b3;
-    box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 25px rgba(10, 102, 164, 0.9);
 }
 
 .logout-btn {
@@ -84,5 +85,6 @@
 .logout-btn:hover {
     box-shadow: inset 0 0 0 2px #ffffff, 0 0 25px rgba(220, 38, 38, 0.9);
     color: #ffffff;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
     background-color: #f11818;
 }
