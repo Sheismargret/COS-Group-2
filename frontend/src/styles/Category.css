@@ -34,7 +34,7 @@
 
 /* The Individual Cards */
 .category-item-card {
-  background-color: #ffffff;
+  background-color: white;
   padding: 25px;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
@@ -47,7 +47,7 @@
 
 .category-item-card:hover {
   border-color: #3b82f6;
-  background-color: #e1ecff;
+  background-color: #f2f7ff;
   transform: translateY(-1px);
 }
 

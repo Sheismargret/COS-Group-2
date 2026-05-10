@@ -8,6 +8,7 @@ const JOBS_DATA = [
   { id: 4, title: "Backend Engineer", company: "Vercel", logo: "V", color: "#000000", desc: "Design and build the infrastructure powering the modern web deployment platform.", loc: "Remote", salary: "$155k - $195k", time: "1 day ago", tags: ["Node.js", "Go", "AWS"], type: "Remote" },
   { id: 5, title: "DevOps Engineer", company: "Datadog", logo: "D", color: "#7933e1", desc: "Build and scale the monitoring infrastructure trusted by thousands of engineering teams.", loc: "New York, NY", salary: "$145k - $190k", time: "2 days ago", tags: ["Kubernetes", "Terraform"], type: "Full-time" },
   { id: 6, title: "ML Engineer", company: "OpenAI", logo: "O", color: "#10a37f", desc: "Push the boundaries of AI research and deploy models that benefit all of humanity.", loc: "San Francisco, CA", salary: "$200k - $280k", time: "Just now", tags: ["PyTorch", "Transformers"], type: "Contract" },
+  { id: 7, title: "Junior Frontend Engineer", company: "Pinterest", logo: "P", color: "#ed0e3f", desc: "Build and maintain the next generation of payment interfaces used by millions of businesses worldwide.", loc: "San Francisco, CA", salary: "$250k - $280k", time: "1 day ago", tags: ["React", "Typescript"], type: "Full-time" },
 ];
 
 function FindJobs() {

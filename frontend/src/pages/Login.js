@@ -56,7 +56,7 @@ function Login() {
           </div>
 
           <button type="submit" className="auth-btn">
-            Login to Account
+            Login
           </button>
         </form>
 

@@ -5,18 +5,21 @@ import '../styles/Login.css';
 const LoginModal = ({ isOpen }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   if (!isOpen) return null;
 
   const handleModalLogin = (e) => {
     e.preventDefault();
+    setError('');
+
     // Use the same logic as your Login page
     if (email === "user@pau.com" && password === "password123") {
       localStorage.setItem('userToken', 'secure-jwt-string');
       window.location.reload(); // Refresh to unblur the background
     } else {
-      alert("Invalid credentials");
+      setError('Invalid email or password. Please try again.');
     }
   };
 
@@ -36,6 +39,8 @@ const LoginModal = ({ isOpen }) => {
         </div>
 
         <form className="auth-form" onSubmit={handleModalLogin}>
+          {error && <div className="error-message">{error}</div>}
+
           <div className="input-group">
             <label>Email Address</label>
             <input 
@@ -58,7 +63,7 @@ const LoginModal = ({ isOpen }) => {
             />
           </div>
 
-          <button type="submit" className="auth-btn">Login to Account</button>
+          <button type="submit" className="auth-btn">Login</button>
         </form>
         
         <div className="auth-footer">
