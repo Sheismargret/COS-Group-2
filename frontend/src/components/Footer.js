@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css'; 
+import { FaFacebook, FaTwitter, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 
 const Footer = () => {
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
         
         {/* Column 1 */}
         <div className="footer-col">
-          <h5 className="footer-brand"><span className="blue-text">PAU Connect</span></h5>
+          <h3 className="col-title"><span className="blue-text">PAU Connect</span></h3>
           <p className="footer-text">Connecting the next generation of professionals with leading companies.</p>
         </div>
 
@@ -22,17 +24,32 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3 */}
+{/* Column 3: Contact */}
         <div className="footer-col">
           <h3 className="col-title">Contact Us</h3>
-          <p className="footer-text">Email: info@pauconnect.edu</p>
-          <p className="footer-text">Phone: +234 123 456 7890</p>
-          <div className="social-links">
-             <span>FB</span> <span>TW</span> <span>IG</span>
+          
+          {/* Email with Icon */}
+          <div className="contact-item">
+            <IoMdMail className="contact-icon" />
+            <span className="footer-text">info@pauconnect.ng</span>
+          </div>
+          
+          {/* Phone with Icon */}
+          <div className="contact-item">
+            <FaPhoneAlt className="contact-icon" />
+            <span className="footer-text">+234 123 456 7890</span>
+          </div>
+
+          {/* Social Media Row */}
+          <div className="social-links-row">
+             <a href="#" className="social-media-link"><FaFacebook /></a>
+             <a href="#" className="social-media-link"><FaTwitter /></a>
+             <a href="#" className="social-media-link"><FaInstagram /></a>
           </div>
         </div>
 
       </div>
+      
       
       <div className="footer-bottom-bar">
         <p>© 2026 PAU Connect. All rights reserved.</p>

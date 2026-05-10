@@ -3,9 +3,17 @@
   display: flex !important;   /* THE MAGIC LINE: Forces side-by-side */
   flex-direction: row;        /* Ensures it's a row, not a column */
   justify-content: space-between; 
-  align-items: flex-start;
+  align-items: baseline;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.col-title {
+  font-size: 24px;         /* Same Size */
+  color: #3b82f6;          /* Same Blue Color */
+  margin-bottom: 25px;     /* Same Spacing */
+  font-weight: bold;
+  margin-top: 0; /* Ensures they all start at the same top line */
 }
 
 .footer-col {
@@ -19,11 +27,6 @@
   margin-bottom: 20px;
 }
 
-.col-title {
-  font-size: 18px;
-  color: #63b3ed;            /* Light blue for headings */
-  margin-bottom: 25px;
-}
 
 .footer-list {
   list-style: none !important; /* Removes those annoying dots */
@@ -42,7 +45,9 @@
 
 .footer-list a:hover {
   color: #007bff;
-  text-decoration: underline;
+  display: inline-block;
+  transform: scale(1.05);
+  transition: all 0.3s ease
 }
 
 .footer-text {
@@ -62,4 +67,40 @@
 
 .blue-text {
   color: #3b82f6;
+}
+
+/* Contact Item Layout (Icon + Text) */
+.contact-item {
+  display: flex;
+  align-items: center; /* Centers icon vertically with text */
+  justify-content: center; /* This centers the icon and text together */
+  gap: 12px;           /* Space between icon and text */
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  color: #3b82f6;      /* The same blue as your title */
+  font-size: 18px;
+}
+
+/* Social Media Row */
+.social-links-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+  justify-content: center; /* Centers the row of icons */
+}
+
+.social-media-link {
+  color: #131516;      /* Matches your text color */
+  font-size: 22px;     /* Size of the social icons */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Your Scale Effect! */
+.social-media-link:hover {
+  color: #3b82f6;      /* Turns blue on hover */
+  transform: scale(1.2);
 }
