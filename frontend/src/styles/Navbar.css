@@ -69,11 +69,12 @@
 
 .logout-btn {
     padding: 0.7rem 1rem;
-    color: #fff !important;
-    background-color: #f11818;
+    color: #f11818 !important;
+    background-color: transparent;
     border-radius: 25px;
     box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
-    border: 0cap solid #df6767;
+    border: none;
+    box-shadow: inset 0 0 0 2px #df6767;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-weight: 600;
@@ -81,6 +82,5 @@
 }
 
 .logout-btn:hover {
-    background-color: #f45e5e;
-    box-shadow: 0 0 25px rgba(220, 38, 38, 0.9);
+    box-shadow: inset 0 0 0 2px #df6767, 0 0 25px rgba(220, 38, 38, 0.9);
 }
