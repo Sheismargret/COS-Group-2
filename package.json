@@ -1,0 +1,29 @@
+{
+  "name": "backendtesting",
+  "version": "1.0.0",
+  "description": "Job Board Backend",
+  "homepage": "https://github.com/ekechinedum/JobBoardBackend#readme",
+  "bugs": {
+    "url": "https://github.com/ekechinedum/JobBoardBackend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekechinedum/JobBoardBackend.git"
+  },
+  "license": "ISC",
+  "author": "Eke Chinedum & Mohammed Durojaiye",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
