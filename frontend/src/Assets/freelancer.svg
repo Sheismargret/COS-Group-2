@@ -1,0 +1,60 @@
+<svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- Background blobs -->
+  <ellipse cx="300" cy="230" rx="190" ry="190" fill="rgba(99,179,237,0.07)" />
+  <ellipse cx="340" cy="260" rx="130" ry="130" fill="rgba(99,179,237,0.06)" />
+
+  <!-- Laptop body -->
+  <rect x="110" y="120" width="300" height="200" rx="14" fill="#1e293b" />
+  <rect x="122" y="132" width="276" height="176" rx="8" fill="#0f172a" />
+
+  <!-- Screen content – browser chrome -->
+  <rect x="122" y="132" width="276" height="18" rx="8" fill="#1e3a5f" />
+  <circle cx="136" cy="141" r="4" fill="#ef4444" />
+  <circle cx="150" cy="141" r="4" fill="#f59e0b" />
+  <circle cx="164" cy="141" r="4" fill="#22c55e" />
+  <rect x="178" y="136" width="120" height="10" rx="5" fill="#0f172a" />
+
+  <!-- Job card 1 -->
+  <rect x="134" y="162" width="252" height="54" rx="8" fill="#1e3a5f" />
+  <rect x="146" y="174" width="28" height="28" rx="6" fill="#3b82f6" />
+  <rect x="182" y="176" width="80" height="8" rx="4" fill="#93c5fd" />
+  <rect x="182" y="190" width="55" height="6" rx="3" fill="#475569" />
+  <rect x="342" y="178" width="34" height="18" rx="9" fill="#3b82f6" />
+  <text x="359" y="191" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif">Apply</text>
+
+  <!-- Job card 2 -->
+  <rect x="134" y="222" width="252" height="54" rx="8" fill="#1e3a5f" />
+  <rect x="146" y="234" width="28" height="28" rx="6" fill="#8b5cf6" />
+  <rect x="182" y="236" width="95" height="8" rx="4" fill="#c4b5fd" />
+  <rect x="182" y="250" width="60" height="6" rx="3" fill="#475569" />
+  <rect x="342" y="238" width="34" height="18" rx="9" fill="#8b5cf6" />
+  <text x="359" y="251" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif">Apply</text>
+
+  <!-- Job card 3 (partial) -->
+  <rect x="134" y="282" width="252" height="30" rx="8" fill="#1e3a5f" opacity="0.6" />
+  <rect x="146" y="290" width="18" height="14" rx="4" fill="#06b6d4" />
+  <rect x="172" y="292" width="70" height="6" rx="3" fill="#67e8f9" opacity="0.7" />
+
+  <!-- Laptop base -->
+  <path d="M80 322 Q80 318 84 318 L436 318 Q440 318 440 322 L450 336 Q452 340 448 340 L72 340 Q68 340 70 336 Z" fill="#1e293b" />
+  <rect x="195" y="318" width="130" height="5" rx="2.5" fill="#0f172a" />
+
+  <!-- Floating badge: New Match! -->
+  <rect x="360" y="96" width="112" height="38" rx="10" fill="#3b82f6" />
+  <text x="416" y="112" text-anchor="middle" font-size="9" font-weight="bold" fill="white" font-family="sans-serif">🎉 New Match!</text>
+  <text x="416" y="126" text-anchor="middle" font-size="8" fill="#bfdbfe" font-family="sans-serif">Frontend Dev • Lagos</text>
+
+  <!-- Floating badge: salary -->
+  <rect x="52" y="200" width="100" height="38" rx="10" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5" />
+  <text x="102" y="216" text-anchor="middle" font-size="8" fill="#93c5fd" font-family="sans-serif">💼 ₦450k/month</text>
+  <text x="102" y="230" text-anchor="middle" font-size="7" fill="#64748b" font-family="sans-serif">Remote · Full-time</text>
+
+  <!-- Floating notification dot -->
+  <circle cx="440" cy="150" r="14" fill="#22c55e" />
+  <text x="440" y="155" text-anchor="middle" font-size="11" fill="white" font-family="sans-serif">✓</text>
+
+  <!-- Small person icon bottom right -->
+  <circle cx="430" cy="370" r="18" fill="#1e3a5f" />
+  <circle cx="430" cy="364" r="7" fill="#93c5fd" />
+  <path d="M416 388 Q430 378 444 388" stroke="#93c5fd" stroke-width="2.5" fill="none" stroke-linecap="round" />
+</svg>
