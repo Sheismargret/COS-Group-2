@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('userToken'); // Clear the session
-        navigate('/Login'); // Redirect to login page
+        navigate('/'); // Redirect to home page
     };
 
     return (
@@ -35,7 +35,12 @@ const Navbar = () => {
                     /* --- Logged Out State --- */
                     <>
                         <li><Link to="/Login">Login</Link></li>
-                        <li><Link to="/Register" className="Register-btn">Register</Link></li>
+                        <button 
+                        className="Register-btn" 
+                        onClick={() => navigate('/Register')}
+                    >
+                        Register
+                    </button>
                     </>
                 )}
             </ul>

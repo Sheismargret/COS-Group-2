@@ -14,9 +14,9 @@ function Login() {
     setError('');
 
     // Simulated login logic
-    if (email === "user@hirehub.com" && password === "password123") {
+    if (email === "user@pau.com" && password === "password123") {
       localStorage.setItem('userToken', 'secure-jwt-string');
-      navigate('/FindJobs');
+      navigate('/'); // Redirect to home after successful login
     } else {
       setError('Invalid email or password. Please try again.');
     }
@@ -56,7 +56,7 @@ function Login() {
           </div>
 
           <button type="submit" className="auth-btn">
-            Login to Account
+            Login
           </button>
         </form>
 

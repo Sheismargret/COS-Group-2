@@ -1,17 +1,20 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import LoginModal from './LoginModal'; 
 
 const ProtectedRoute = ({ children }) => {
-  // This is where you check if the user is logged in.
-  // Usually, you check localStorage for a token.
-  const isAuthenticated = localStorage.getItem('userToken'); 
+  const isAuthenticated = localStorage.getItem('userToken');
 
   if (!isAuthenticated) {
-    // If not authenticated, redirect to login
-    return <Navigate to="/Login" replace />;
+    return (
+      <div style={{ position: 'relative' }}>
+        <div style={{ filter: 'blur(8px)', pointerEvents: 'none' }}>
+          {children}
+        </div>
+        <LoginModal isOpen={true} />
+      </div>
+    );
   }
 
-  // If authenticated, render the page
   return children;
 };
 
