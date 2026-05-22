@@ -1,4 +1,5 @@
 /* Page wrapper */
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;500;600;700&display=swap');
 
 .home-content {
   min-height: 100vh;
@@ -12,8 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  padding: 80px 10% 160px; /* bottom padding makes room for floating stats */
+  gap: 0px;
+  padding: 70px 10% 170px; /* bottom padding makes room for floating stats */
   background: #0b1120;
   background-image:
     radial-gradient(ellipse at 70% 50%, rgba(59,130,246,0.18) 0%, transparent 60%),
@@ -24,9 +25,20 @@
 /*Text side (left)*/
 .hero-text {
   flex: 1;
-  max-width: 560px;
+  max-width: 760px;
   text-align: left;
   max-height: 100vh;
+}
+
+.hero-text h1 {
+  font-size: 4.85rem;
+  font-family: 'Cal Sans', sans-serif;
+  font-weight: 700;
+  color: #f1f5f9;
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+  margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 /*Illustration side (right)*/
@@ -41,7 +53,7 @@
 .hero-illustration img {
   width: 100%;
   height: auto;
-  max-width: 480px;
+  max-width: 520px;
   animation: float 5s ease-in-out infinite;
 }
 

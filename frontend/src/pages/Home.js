@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import Category from '../components/Category';
 import Footer from '../components/Footer';
-
-// ── Paste your illustration file path below ──
 import heroIllustration from '../Assets/freelancer.svg';
 
 function Home() {
