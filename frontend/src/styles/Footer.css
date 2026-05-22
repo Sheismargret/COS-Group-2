@@ -1,10 +1,12 @@
+
 .footer-row {
   display: flex !important;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start; /* align to top, not baseline */
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 80px auto;
+  
 }
 
 .col-title {

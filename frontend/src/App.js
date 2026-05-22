@@ -6,6 +6,7 @@ import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import FindJobs from './pages/FindJobs.js';
 import PostJob from './pages/PostJob.js';
+import './styles/Roadmap.css';
 import './App.css';
 
 function App() {
