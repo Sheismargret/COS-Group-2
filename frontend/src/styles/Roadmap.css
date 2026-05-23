@@ -1,0 +1,179 @@
+/*HOW IT WORKS — ROADMAP*/
+
+.roadmap-section {
+  padding: 70px 10%;
+  background: #0b1120;
+  background-image:
+    radial-gradient(ellipse at 15% 50%, rgba(139, 92, 246, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 55%);
+
+}
+
+
+.roadmap-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.roadmap-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-family: dm sans, sans-serif;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 12px;
+}
+
+.roadmap-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+
+.roadmap-sub {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* Column labels */
+.roadmap-labels {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.roadmap-label {
+  flex: 1;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 30px;
+}
+
+.seeker-label {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.2);
+}
+
+.employer-label {
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-label-spacer {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+/* Steps */
+.roadmap-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmap-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+/* Cards */
+.roadmap-card {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 28px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.seeker-card {
+  border-left: 3px solid #3b82f6;
+}
+
+.employer-card {
+  border-right: 3px solid rgba(147, 197, 253, 0.4);
+  border-left: none;
+}
+
+.roadmap-card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.roadmap-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 6px;
+}
+
+.roadmap-card-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Centre spine */
+.roadmap-spine {
+  width: 80px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spine-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.1));
+}
+
+.spine-line.hidden {
+  background: transparent;
+}
+
+.spine-node {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0b1120;
+  border: 2px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.12), 0 0 16px rgba(59, 130, 246, 0.25);
+}
+
+.spine-step {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #93c5fd;
+  letter-spacing: 0.5px;
+}

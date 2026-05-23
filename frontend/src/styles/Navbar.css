@@ -8,14 +8,14 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10; /* Ensures it stays above other elements */
+    z-index: 11; /* Ensures it stays above other elements */
 
     -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%); /* Feathers out the bottom edge */
     mask-image: linear-gradient(to bottom, black 72%, transparent 100%);
 }
 
 .navbar {
-  backdrop-filter: blur(10px); /* Blurs whatever is behind it */
+  backdrop-filter: blur(7px); /* Blurs whatever is behind it */
 }
 
 .nav-logo {
@@ -25,56 +25,76 @@
 
 .nav-logo a {
     text-decoration: none;
-    color: #007bff;
+    color: #3b82f6;
+    text-shadow: 0 0 20px rgba(59,130,246,0.45);
+    transition: all ease-in-out 0.2s;
+}
+
+.nav-logo a:hover {
+    color: #2563eb;
+    text-shadow: 0 0 30px rgba(59,130,246,0.75);
 }
 
 .nav-links {
-    display: flex;
+    display: inline-flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #535659;
+    color: #3b82f6;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
+    align-items: center;
     transition: all 0.2s ease-in-out;
+    text-shadow: 0 0 20px rgba(59,130,246,0.45);
 }
 
 .nav-links a:hover {
-    color: #007bff;
-    text-shadow: 0 0 25px rgba(52, 152, 219, 0.9); 
+    color: #2563eb  ;
+    text-shadow: 0 0 25px rgba(52, 152, 219, 2); 
 }
 
 .Register-btn {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
+    padding: 0.7rem 1rem;
+    background: #3b82f6;
+    border: none;
     color: #fff !important;
     border-radius: 25px;
-    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
+    box-shadow: 0 0 20px rgba(59,130,246,0.45);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
 
 }
 .Register-btn:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0 25px rgba(52, 152, 219, 0.9);
+    background: #2563eb;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 30px rgba(59,130,246,0.75);
 }
 
 .logout-btn {
-    padding: 0.5rem 1rem;
-    background-color: #dc2626;
-    color: #fff !important;
+    padding: 0.7rem 1rem;
+    color: #df6767  ;
+    background-color: transparent;
     border-radius: 25px;
     box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
     border: none;
+    box-shadow: inset 0 0 0 2px #df6767, 0 0 5px rgba(220, 38, 38, 0.9);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-weight: 600;
     font-size: 15px;
+    text-shadow: 0 0 40px rgba(241, 24, 24, 0.9);
 }
 
 .logout-btn:hover {
-    background-color: #b91c1c;
-    box-shadow: 0 0 25px rgba(220, 38, 38, 0.9);
+    box-shadow: inset 0 0 0 2px #ffffff, 0 0 25px rgba(220, 38, 38, 0.9);
+    color: #ffffff;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    background-color: #f11818;
 }
