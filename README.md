@@ -281,7 +281,7 @@ http://localhost:8000
 
 ## Bug Reporting
 
-When you find a bug, create a **GitHub Issue** using this template:
+
 
 ```
 **Bug Title:** Short description of the issue
