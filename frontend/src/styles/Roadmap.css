@@ -1,6 +1,4 @@
-/* ════════════════════════════════
-   HOW IT WORKS — ROADMAP
-════════════════════════════════ */
+/*HOW IT WORKS — ROADMAP*/
 
 .roadmap-section {
   padding: 70px 10%;
@@ -20,7 +18,8 @@
 .roadmap-eyebrow {
   display: inline-block;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: dm sans, sans-serif;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   color: #93c5fd;
@@ -28,11 +27,11 @@
 }
 
 .roadmap-heading {
-  font-family: 'Cal Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #f1f5f9;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0 0 12px;
 }
 

@@ -45,6 +45,7 @@
 .nav-links a {
     text-decoration: none;
     color: #3b82f6;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     align-items: center;
     transition: all 0.2s ease-in-out;
