@@ -29,7 +29,7 @@ const Register = () => {
     };
 
     return (
-        <div className="auth-wrapper">
+        <div className="auth-wrapper2">
             <div className="auth-card">
                 <div className="auth-header">
                     <h2>Create Account</h2>

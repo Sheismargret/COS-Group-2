@@ -25,7 +25,14 @@
 
 .nav-logo a {
     text-decoration: none;
-    color: #007bff;
+    color: #3b82f6;
+    text-shadow: 0 0 20px rgba(59,130,246,0.45);
+    transition: all ease-in-out 0.2s;
+}
+
+.nav-logo a:hover {
+    color: #2563eb;
+    text-shadow: 0 0 30px rgba(59,130,246,0.75);
 }
 
 .nav-links {
@@ -37,25 +44,26 @@
 
 .nav-links a {
     text-decoration: none;
-    color: #007bff;
+    color: #3b82f6;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     align-items: center;
     transition: all 0.2s ease-in-out;
-    text-shadow: 0 0 25px rgba(52, 152, 219, 0.6); 
+    text-shadow: 0 0 20px rgba(59,130,246,0.45);
 }
 
 .nav-links a:hover {
-    color: #007bff;
+    color: #2563eb  ;
     text-shadow: 0 0 25px rgba(52, 152, 219, 2); 
 }
 
 .Register-btn {
     padding: 0.7rem 1rem;
-    background-color: #007bff;
+    background: #3b82f6;
     border: none;
     color: #fff !important;
     border-radius: 25px;
-    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6); 
+    box-shadow: 0 0 20px rgba(59,130,246,0.45);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     font-weight: 600;
@@ -64,9 +72,9 @@
 
 }
 .Register-btn:hover {
-    background-color: #0056b3;
+    background: #2563eb;
     text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 25px rgba(10, 102, 164, 0.9);
+    box-shadow: 0 0 30px rgba(59,130,246,0.75);
 }
 
 .logout-btn {
