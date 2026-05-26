@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # COS-Group-2
 # Job board web application project
 ## QA/ Documentation Team Report
@@ -142,3 +143,4 @@ QA/ Documentation Team
 -README Documentation
 -Bug Reporting 
 -Project Documentation Maintenance
+=======
