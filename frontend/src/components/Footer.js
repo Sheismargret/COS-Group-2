@@ -42,9 +42,9 @@ const Footer = () => {
 
           {/* Social Media Row */}
           <div className="social-links-row">
-             <a href="#" className="social-media-link"><FaFacebook /></a>
-             <a href="#" className="social-media-link"><FaTwitter /></a>
-             <a href="#" className="social-media-link"><FaInstagram /></a>
+             <a href="https://facebook.com" className="social-media-link" aria-label="Facebook"><FaFacebook /></a>
+             <a href="https://twitter.com" className="social-media-link" aria-label="Twitter"><FaTwitter /></a>
+             <a href="https://instagram.com" className="social-media-link" aria-label="Instagram"><FaInstagram /></a>
           </div>
         </div>
 

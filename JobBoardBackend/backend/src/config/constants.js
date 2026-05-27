@@ -1,1 +1,0 @@
-export const DB_NAME = "BackendDev_Group1_MO&NEDU" 

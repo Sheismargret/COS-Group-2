@@ -6,7 +6,9 @@ import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import FindJobs from './pages/FindJobs.js';
 import PostJob from './pages/PostJob.js';
+import Profile from './pages/Profile'; 
 import './App.css';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Profile" element={<Profile />} />
 
         {/* PROTECTED ROUTES */}
   <Route 
