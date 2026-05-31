@@ -44,9 +44,15 @@ const Footer = () => {
 
           {/* Social Media Row */}
           <div className="social-links-row">
+<<<<<<< HEAD
              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-media-link"><FaFacebook /></a>
              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-media-link"><FaTwitter /></a>
              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-media-link"><FaInstagram /></a>
+=======
+             <a href="https://facebook.com" className="social-media-link" aria-label="Facebook"><FaFacebook /></a>
+             <a href="https://twitter.com" className="social-media-link" aria-label="Twitter"><FaTwitter /></a>
+             <a href="https://instagram.com" className="social-media-link" aria-label="Instagram"><FaInstagram /></a>
+>>>>>>> f33ce56b14edc2db64e22d70aa4da4d0ca1c6967
           </div>
         </div>
 

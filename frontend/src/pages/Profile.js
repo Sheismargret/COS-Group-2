@@ -86,7 +86,7 @@ function Profile() {
             <div className="pau-project-box">
               <div className="pau-project-header">
                 <h4 className="pau-project-title">PAU Connect — Job Portal Platform</h4>
-                <a href="#" className="pau-project-link"><FaExternalLinkAlt /></a>
+                <a href="https://github.com" className="pau-project-link" aria-label="Project link"><FaExternalLinkAlt /></a>
               </div>
               <p className="pau-bio-text">
                 Collaborating with group mates to develop a feature-rich talent platform using React and advanced CSS configurations.
