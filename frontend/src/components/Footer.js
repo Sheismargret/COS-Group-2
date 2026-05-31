@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Footer.css'; 
+import { Link } from 'react-router-dom'; 
 import { FaFacebook, FaTwitter, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
@@ -18,13 +19,14 @@ const Footer = () => {
         <div className="footer-col">
           <h3 className="col-title">Quick Links</h3>
           <ul className="footer-list">
-            <li><a href="/FindJobs">Find Jobs</a></li>
-            <li><a href="/PostJob">Post a Job</a></li>
-            <li><a href="/About">About Us</a></li>
+            {/* Swapped <a> tags out for React Router <Link> tags */}
+            <li><Link to="/FindJobs">Find Jobs</Link></li>
+            <li><Link to="/PostJob">Post a Job</Link></li>
+            <li><Link to="/About">About Us</Link></li>
           </ul>
         </div>
 
-{/* Column 3: Contact */}
+        {/* Column 3*/}
         <div className="footer-col">
           <h3 className="col-title">Contact Us</h3>
           
@@ -42,14 +44,13 @@ const Footer = () => {
 
           {/* Social Media Row */}
           <div className="social-links-row">
-             <a href="#" className="social-media-link"><FaFacebook /></a>
-             <a href="#" className="social-media-link"><FaTwitter /></a>
-             <a href="#" className="social-media-link"><FaInstagram /></a>
+             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-media-link"><FaFacebook /></a>
+             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-media-link"><FaTwitter /></a>
+             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-media-link"><FaInstagram /></a>
           </div>
         </div>
 
       </div>
-      
       
       <div className="footer-bottom-bar">
         <p>© 2026 PAU Connect. All rights reserved.</p>
