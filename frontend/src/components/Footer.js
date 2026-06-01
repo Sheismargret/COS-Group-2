@@ -43,9 +43,9 @@ const Footer = () => {
 
           {/* Social Media Row */}
           <div className="social-links-row">
-             <a href="https://facebook.com" className="social-media-link" aria-label="Facebook"><FaFacebook /></a>
-             <a href="https://twitter.com" className="social-media-link" aria-label="Twitter"><FaTwitter /></a>
-             <a href="https://instagram.com" className="social-media-link" aria-label="Instagram"><FaInstagram /></a>
+             <button type="button" className="social-media-link" aria-label="Facebook" onClick={() => window.open('https://facebook.com', '_blank', 'noopener,noreferrer')}><FaFacebook /></button>
+             <button type="button" className="social-media-link" aria-label="Twitter" onClick={() => window.open('https://twitter.com', '_blank', 'noopener,noreferrer')}><FaTwitter /></button>
+             <button type="button" className="social-media-link" aria-label="Instagram" onClick={() => window.open('https://instagram.com', '_blank', 'noopener,noreferrer')}><FaInstagram /></button>
           </div>
         </div>
 

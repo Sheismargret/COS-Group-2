@@ -96,7 +96,7 @@ function Profile() {
             <div className="pau-project-box">
               <div className="pau-project-header">
                 <h4 className="pau-project-title">PAU Connect — Job Portal Platform</h4>
-                <a href="https://github.com" className="pau-project-link" aria-label="Project link"><FaExternalLinkAlt /></a>
+                <button type="button" className="pau-project-link" aria-label="Project link" onClick={() => window.open('https://github.com', '_blank', 'noopener,noreferrer')}><FaExternalLinkAlt /></button>
               </div>
               <p className="pau-bio-text">
                 Collaborating with group mates to develop a feature-rich talent platform using React and advanced CSS configurations.
