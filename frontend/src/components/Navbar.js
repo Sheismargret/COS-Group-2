@@ -1,16 +1,15 @@
 import React from 'react';
 import '../styles/Navbar.css';
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
     const navigate = useNavigate();
-    
-    // Check if the user is logged in
-    const isAuthenticated = localStorage.getItem('userToken'); 
+    const { isAuthenticated, logout, user } = useAuth();
 
     const handleLogout = () => {
-        localStorage.removeItem('userToken'); // Clear the session
-        navigate('/'); // Redirect to home page
+        logout();
+        navigate('/');
     };
 
     return (
@@ -25,6 +24,9 @@ const Navbar = () => {
                     /* --- Logged In State --- */
                     <>
                         <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/find-jobs">Find Jobs</Link></li>
+                        <li><Link to="/post-job">Post a Job</Link></li>
+                        <li className="nav-user-label">{user?.fullName || user?.email}</li>
                         <li>
                             <button onClick={handleLogout} className="logout-btn">
                                 Log out
@@ -34,10 +36,10 @@ const Navbar = () => {
                 ) : (
                     /* --- Logged Out State --- */
                     <>
-                        <li><Link to="/Login">Login</Link></li>
+                        <li><Link to="/login">Login</Link></li>
                         <button 
                         className="Register-btn" 
-                        onClick={() => navigate('/Register')}
+                        onClick={() => navigate('/register')}
                     >
                         Register
                     </button>

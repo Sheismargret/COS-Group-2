@@ -7,6 +7,7 @@ import Login from './pages/Login.js';
 import FindJobs from './pages/FindJobs.js';
 import PostJob from './pages/PostJob.js';
 import Profile from './pages/Profile'; 
+import About from './pages/About';
 import './App.css';
 
 
@@ -16,29 +17,28 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/about" element={<About />} />
 
         {/* PROTECTED ROUTES */}
-  <Route 
-    path="/FindJobs"
-    element={
-      <ProtectedRoute>
-        <FindJobs />
-      </ProtectedRoute>
-    } 
-  />
-  <Route 
-    path="/PostJob" 
-    element={
-      <ProtectedRoute>
-        <PostJob />
-      </ProtectedRoute>
-    } 
-  />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/FindJobs" element={<FindJobs />} />
-        <Route path="/PostJob" element={<PostJob />} />
+        <Route 
+          path="/find-jobs"
+          element={
+            <ProtectedRoute>
+              <FindJobs />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/post-job" 
+          element={
+            <ProtectedRoute>
+              <PostJob />
+            </ProtectedRoute>
+          } 
+        />
       </Routes>
     </div>
   );

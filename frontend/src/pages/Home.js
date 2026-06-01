@@ -45,8 +45,8 @@ function Home() {
             Your next career move is one click away.
           </p>
           <div className="button-row">
-            <Link to="/FindJobs" className="primary-btn">Find Jobs</Link>
-            <Link to="/PostJob" className="secondary-btn">Post a job</Link>
+            <Link to="/find-jobs" className="primary-btn">Find Jobs</Link>
+            <Link to="/post-job" className="secondary-btn">Post a job</Link>
           </div>
         </div>
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import LoginModal from './LoginModal'; 
+import { useAuth } from '../context/AuthContext';
 
 const ProtectedRoute = ({ children }) => {
-  const isAuthenticated = localStorage.getItem('userToken');
+  const { isAuthenticated } = useAuth();
 
   if (!isAuthenticated) {
     return (

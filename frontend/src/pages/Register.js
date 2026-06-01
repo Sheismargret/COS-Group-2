@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Added for seamless navigation
 import '../styles/Register.css';
+import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
     // State to keep track of user input
     const navigate = useNavigate();
+    const { register } = useAuth();
 
     const [formData, setFormData] = useState({
         fullName: '',
@@ -12,6 +14,8 @@ const Register = () => {
         password: '',
         confirmPassword: ''
     });
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     // Function to handle input changes
     const handleChange = (e) => {
@@ -21,11 +25,29 @@ const Register = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Add your logic here for what happens when the form is submitted
-        console.log("Registration Data:", formData);
-        navigate('/Login'); // Redirect to login page after registration
+        setError('');
+
+        if (formData.password !== formData.confirmPassword) {
+            setError('Passwords do not match.');
+            return;
+        }
+
+        setIsLoading(true);
+        try {
+            await register({
+                fullName: formData.fullName,
+                email: formData.email,
+                password: formData.password,
+                role: 'seeker',
+            });
+            navigate('/');
+        } catch (err) {
+            setError(err.message || 'Registration failed.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -36,6 +58,7 @@ const Register = () => {
                     <p>Join the group project and start collaborating.</p>
                 </div>
                 <form className="auth-form" onSubmit={handleSubmit}>
+                    {error && <div className="error-message">{error}</div>}
                     <div className="input-group">
                         <label>Full Name</label>
                         <input 
@@ -80,7 +103,9 @@ const Register = () => {
                             required 
                         />
                     </div>
-                    <button type="submit" className="auth-btn">Sign Up</button>
+                    <button type="submit" className="auth-btn" disabled={isLoading}>
+                        {isLoading ? 'Creating...' : 'Sign Up'}
+                    </button>
                 </form>
                 <div className="auth-footer">
                     <p>Already have an account? <Link to="/login">Login here</Link></p>

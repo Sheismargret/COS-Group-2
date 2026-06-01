@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import '../styles/Profile.css';
 import { FaUserCircle, FaCamera, FaCloudUploadAlt, FaBriefcase, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa';
+import { useAuth } from '../context/AuthContext';
 
 function Profile() {
+  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState(null);
+  const [avatarFile, setAvatarFile] = useState(null);
 
   const handleFileChange = (e) => {
     if (e.target.files[0]) {
       setSelectedFile(e.target.files[0].name);
+    }
+  };
+
+  const handleAvatarChange = (e) => {
+    if (e.target.files[0]) {
+      setAvatarFile(e.target.files[0].name);
     }
   };
 
@@ -22,12 +31,13 @@ function Profile() {
               <FaUserCircle className="pau-default-avatar" />
               <label htmlFor="pau-avatar-input" className="pau-avatar-upload-badge">
                 <FaCamera />
-                <input type="file" id="pau-avatar-input" accept="image/*" style={{ display: 'none' }} />
+                <input type="file" id="pau-avatar-input" accept="image/*" onChange={handleAvatarChange} style={{ display: 'none' }} />
               </label>
             </div>
-            <h2 className="pau-user-name">Name</h2>
+            <h2 className="pau-user-name">{user?.fullName || 'Name'}</h2>
             <p className="pau-user-headline">Student at Pan-Atlantic University (PAU)</p>
-            <span className="pau-user-location">Lagos, Nigeria</span>
+            <span className="pau-user-location">{user?.email || 'Lagos, Nigeria'}</span>
+            {avatarFile && <div className="pau-uploaded-file-pill">🖼️ {avatarFile}</div>}
           </div>
 
           <div className="pau-profile-hr" />

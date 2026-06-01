@@ -9,12 +9,15 @@ const app = express(); //create an express app
 
 app.disable("x-powered-by");
 app.set("trust proxy", 1);
+const corsOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean)
+  : "*";
 app.use(helmet());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",") : "*",
+    origin: corsOrigins,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true,
+    credentials: false,
   })
 );
 app.use(
@@ -44,6 +47,13 @@ const parsePositiveInt = (value) => {
   const parsed = Number.parseInt(value, 10);
   return Number.isInteger(parsed) && parsed > 0 ? parsed : null;
 };
+const serializeUser = (row) => ({
+  id: row.id,
+  fullName: row.full_name,
+  email: row.email,
+  role: row.role,
+  createdAt: row.created_at,
+});
 
 app.get("/health", async (_req, res) => {
   try {
@@ -74,7 +84,45 @@ app.post("/api/v1/users", asyncHandler(async (req, res) => {
      RETURNING id, full_name, email, role, created_at`,
     [fullName.trim(), email.toLowerCase(), passwordHash, role]
   );
-  res.status(201).json({ success: true, data: rows[0] });
+  res.status(201).json({ success: true, data: serializeUser(rows[0]) });
+}));
+
+app.post("/api/v1/auth/register", asyncHandler(async (req, res) => {
+  const { fullName, email, password, role = "seeker" } = req.body;
+  if (!fullName || fullName.trim().length < 2) return sendError(res, 400, "fullName must be at least 2 characters.");
+  if (!email || !isValidEmail(email)) return sendError(res, 400, "A valid email is required.");
+  if (!password || password.length < 8) return sendError(res, 400, "password must be at least 8 characters.");
+
+  const passwordHash = await bcrypt.hash(password, 12);
+  const { rows } = await query(
+    `INSERT INTO users (full_name, email, password_hash, role)
+     VALUES ($1, $2, $3, $4)
+     RETURNING id, full_name, email, role, created_at`,
+    [fullName.trim(), email.toLowerCase(), passwordHash, role]
+  );
+
+  res.status(201).json({ success: true, data: serializeUser(rows[0]) });
+}));
+
+app.post("/api/v1/auth/login", asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) return sendError(res, 400, "email and password are required.");
+
+  const { rows } = await query(
+    "SELECT id, full_name, email, role, password_hash, created_at FROM users WHERE email = $1 LIMIT 1",
+    [email.toLowerCase()]
+  );
+  const user = rows[0];
+  if (!user) return sendError(res, 401, "Invalid email or password.");
+
+  const passwordMatches = await bcrypt.compare(password, user.password_hash);
+  if (!passwordMatches) return sendError(res, 401, "Invalid email or password.");
+
+  return res.json({
+    success: true,
+    data: serializeUser(user),
+    token: `user-${user.id}`,
+  });
 }));
 
 app.get("/api/v1/jobs", asyncHandler(async (_req, res) => {
@@ -104,6 +152,23 @@ app.post("/api/v1/jobs", asyncHandler(async (req, res) => {
     [title.trim(), companyName.trim(), location, description.trim(), creatorId]
   );
   res.status(201).json({ success: true, data: rows[0] });
+}));
+
+app.get("/api/v1/jobs/:id", asyncHandler(async (req, res) => {
+  const jobId = parsePositiveInt(req.params.id);
+  if (!jobId) return sendError(res, 400, "id must be a positive integer.");
+
+  const { rows } = await query(
+    `SELECT j.id, j.title, j.company_name, j.location, j.description, j.created_by, j.created_at,
+            u.full_name AS creator_name
+     FROM jobs j
+     LEFT JOIN users u ON u.id = j.created_by
+     WHERE j.id = $1
+     LIMIT 1`,
+    [jobId]
+  );
+  if (!rows[0]) return sendError(res, 404, "Job not found.");
+  res.json({ success: true, data: rows[0] });
 }));
 
 app.get("/api/v1/applications", asyncHandler(async (_req, res) => {

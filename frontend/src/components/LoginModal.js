@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css'; 
+import { useAuth } from '../context/AuthContext';
 
 const LoginModal = ({ isOpen }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   if (!isOpen) return null;
 
-  const handleModalLogin = (e) => {
+  const handleModalLogin = async (e) => {
     e.preventDefault();
     setError('');
-
-    // Use the same logic as your Login page
-    if (email === "user@pau.com" && password === "password123") {
-      localStorage.setItem('userToken', 'secure-jwt-string');
-      window.location.reload(); // Refresh to unblur the background
-    } else {
-      setError('Invalid email or password. Please try again.');
+    setIsLoading(true);
+    try {
+      await login(email, password);
+    } catch (err) {
+      setError(err.message || 'Invalid email or password. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const handleClose = () => {
-    navigate('/'); // Send them home if they close the mandatory login
+    navigate('/');
   };
 
   return (
@@ -63,11 +66,13 @@ const LoginModal = ({ isOpen }) => {
             />
           </div>
 
-          <button type="submit" className="auth-btn">Login</button>
+          <button type="submit" className="auth-btn" disabled={isLoading}>
+            {isLoading ? 'Logging in...' : 'Login'}
+          </button>
         </form>
         
         <div className="auth-footer">
-          New here? <button onClick={() => navigate('/Register')} className="link-btn">Create an account</button>
+          New here? <button type="button" onClick={() => navigate('/register')} className="link-btn">Create an account</button>
         </div>
       </div>
     </div>

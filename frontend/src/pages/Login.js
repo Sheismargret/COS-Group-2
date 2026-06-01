@@ -1,24 +1,28 @@
 import React, { useState } from 'react'; 
 import '../styles/Login.css';
 import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate for redirection
+import { useAuth } from '../context/AuthContext';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   
   const navigate = useNavigate();
+  const { login } = useAuth();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
-
-    // Simulated login logic
-    if (email === "user@pau.com" && password === "password123") {
-      localStorage.setItem('userToken', 'secure-jwt-string');
-      navigate('/'); // Redirect to home after successful login
-    } else {
-      setError('Invalid email or password. Please try again.');
+    setIsLoading(true);
+    try {
+      await login(email, password);
+      navigate('/');
+    } catch (err) {
+      setError(err.message || 'Invalid email or password. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -55,8 +59,8 @@ function Login() {
             />
           </div>
 
-          <button type="submit" className="auth-btn">
-            Login
+          <button type="submit" className="auth-btn" disabled={isLoading}>
+            {isLoading ? 'Logging in...' : 'Login'}
           </button>
         </form>
 
