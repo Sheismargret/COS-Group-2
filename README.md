@@ -1,56 +1,364 @@
-# COS-Group-2
-Job board web application project
-React Web Application
-Project Overview
+# PAU Connect – QA Documentation
 
-This project is a web application developed using React. It follows a Single Page Application (SPA) approach, which allows users to interact with the application without experiencing full page reloads. The application is designed to provide a fast, responsive, and seamless user experience across different devices and platforms.
+**Live Application:** [https://cos-group-2.vercel.app](https://cos-group-2.vercel.app)
 
-The project uses Create React App as its foundation, providing a structured development environment and modern web development tools.
+PAU Connect is a Job Board Web Application that connects job seekers with employers. Built with React on the frontend and Node.js/Express on the backend, it provides a fast, responsive, and seamless experience across all devices.
 
-Purpose
+---
 
-The purpose of this application is to serve as a React-based web platform where users can access content and features through a modern, interactive interface. React dynamically renders content within the browser, improving performance and user experience.
+## Table of Contents
 
-Features
-Responsive design that adapts to different screen sizes.
-Dynamic content rendering using React.
-Cross-browser compatibility.
-Support for Progressive Web App (PWA) functionality.
-Customizable application icons and branding.
-Fast and efficient navigation without full page refreshes.
-Technologies Used
-React.js
-HTML5
-JavaScript
-CSS
-Create React App
-How the Application Works
+- [Project Overview](#project-overview)
+- [Live Application](#live-application)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Frontend Setup](#frontend-setup)
+  - [Backend Setup](#backend-setup)
+- [Features](#features)
+- [Testing](#testing)
+  - [Frontend Test Cases](#frontend-test-cases)
+  - [Backend API Test Cases](#backend-api-test-cases)
+- [Bug Reporting](#bug-reporting)
+- [Resolved Issues](#resolved-issues)
+- [Known Issues](#known-issues)
+- [Future Enhancements](#future-enhancements)
+- [Contributors](#contributors)
 
-The application loads a main HTML template that serves as the entry point for the React application. Once the page loads, React takes control of the user interface and dynamically updates content based on user interactions and application state.
+---
 
-This architecture improves performance by reducing unnecessary page reloads and providing a smoother user experience.
+## Project Overview
 
-Installation and Setup
+PAU Connect is a Job Board Web Application that allows:
+- **Employers** to post, manage, and review applications for job listings
+- **Job Seekers** to search, filter, and apply for jobs
 
-To run the project locally, developers need to clone the repository, install the required dependencies, and start the development server. Once the server is running, the application can be accessed through a web browser for testing and development purposes.
+The frontend follows a Single Page Application (SPA) approach using React, providing a fast and seamless user experience without full page reloads.
 
-Development Process
+---
 
-The project was developed using modern front-end development practices. React components are used to organize the application's user interface into reusable and maintainable sections. This approach improves code readability, scalability, and collaboration among team members.
+## Live Application
 
-Testing and Debugging
+| Environment | URL |
+|-------------|-----|
+| Frontend (Production) | [https://cos-group-2.vercel.app](https://cos-group-2.vercel.app) |
+| Backend API | `http://localhost:8000` (local) |
 
-Throughout development, testing and debugging activities were carried out to ensure the application functioned correctly. Common issues encountered included component rendering errors, dependency conflicts, and browser compatibility issues. These issues were resolved through code reviews, debugging tools, and continuous testing to improve the application's reliability and performance.
+---
 
-Future Enhancements
+## Tech Stack
 
-Potential future improvements include:
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js, React Router DOM, CSS |
+| Backend | Node.js, Express.js |
+| Database | PostgreSQL |
+| Deployment | Vercel (Frontend) |
+| Testing |  Manual (UI) |
+| Version Control | Git / GitHub |
 
-Adding additional features and functionality.
-Improving user interface design and accessibility.
-Integrating external APIs and backend services.
-Enhancing security and performance.
-Expanding Progressive Web App capabilities.
-Conclusion
+---
 
-This React web application demonstrates the use of modern web development technologies to create an interactive and responsive user experience. Its component-based architecture promotes maintainability, scalability, and efficient development, making it a strong foundation for future enhancements and feature expansion.
+## Project Structure
+
+```
+COS-Group-2/
+├── frontend/              # React frontend application
+│   └── src/
+│       ├── components/    # Reusable UI components
+│       ├── pages/         # Application pages
+│       ├── styles/        # CSS stylesheets
+│       └── App.js         # Main app entry point
+└── backend/               # Node.js backend API
+    └── src/
+        ├── config/        # App configuration
+        ├── models/        # Database models
+        │   ├── User.js
+        │   ├── Job.js
+        │   └── Application.js
+        ├── app.js         # Express app setup
+        └── index.js       # Server entry point
+```
+
+---
+
+## Getting Started
+
+### Frontend Setup
+
+1. Navigate to the frontend folder:
+```bash
+cd frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the frontend folder:
+```
+REACT_APP_API_URL=https://your-deployed-backend-url.com
+```
+
+4. Start the development server:
+```bash
+npm start
+```
+
+5. Open your browser at:
+```
+http://localhost:3000
+```
+
+---
+
+### Backend Setup
+
+1. Navigate to the backend folder:
+```bash
+cd backend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the backend folder:
+```
+NODE_ENV=production
+DATABASE_URL=postgresql://<user>:<password>@<host>/<database>?sslmode=require
+CORS_ORIGIN=https://cos-group-2.vercel.app
+PORT=8000
+```
+
+4. Start the server:
+```bash
+node index.js
+```
+
+5. Server will run at:
+```
+http://localhost:8000
+```
+
+---
+
+
+
+
+### Frontend `.env`
+
+| Variable | Description |
+|----------|-------------|
+| `REACT_APP_API_URL` | URL of the deployed backend API |
+
+### Backend `.env`
+
+| Variable | Description |
+|----------|-------------|
+| `NODE_ENV` | Environment (development/production) |
+| `DATABASE_URL` | PostgreSQL connection string |
+| `CORS_ORIGIN` | Allowed frontend URL for CORS |
+| `PORT` | Port the server runs on (default: 8000) |
+
+---
+
+## Features
+
+- User registration and login for job seekers and employers
+- Employer job posting, editing, and deletion
+- Job search and filtering by location, type, and salary
+- Job application submission and management
+- Application status updates (accept/reject)
+- Responsive design for mobile, tablet, and desktop
+- Cross-browser compatibility
+- Progressive Web App (PWA) support
+
+---
+
+## Testing
+
+### Frontend Test Cases
+
+> Test the live app at: [https://cos-group-2.vercel.app](https://cos-group-2.vercel.app)
+
+#### General
+
+| Test | Expected Result | Status |
+|------|----------------|--------|
+| App loads without errors | Homepage displays correctly |
+| No blank white screen on load | Content is visible immediately |
+| Browser console has no red errors | Console shows no errors |
+| Page title shows "PAU Connect" | Tab shows correct app name |
+
+#### Navigation
+
+| Test | Expected Result | Status |
+|------|----------------|--------|
+| Navbar is visible on all pages | Navbar shows on every page |
+| Clicking logo goes to home | Redirects to homepage |
+| All navbar links work | Each link goes to correct page |
+| No broken links | No 404 pages |
+
+#### Login Page
+
+| Test | Expected Result | Status |
+|------|----------------|--------|
+| Login form loads correctly | Email and password fields visible |
+| Login with valid credentials | User logged in, redirected to dashboard |
+| Login with wrong password | Error message displayed |
+| Login with empty fields | Validation error shown |
+| Login with invalid email format | Validation error shown |
+
+#### Register Page
+
+| Test | Expected Result | Status |
+|------|----------------|--------|
+| Registration form loads correctly | All fields visible |
+| Register with valid details | Account created successfully |
+| Register with missing fields | Validation error shown |
+| Register with existing email | "Email already exists" error shown | 
+
+#### Job Listings Page
+
+| Test | Expected Result | Status |
+|------|----------------|--------|
+| Job listings load correctly | List of jobs displayed |
+| Each job card shows correct info | Title, company, location visible | 
+| Search by keyword works | Relevant results shown |
+| Filter by location works | Correct jobs shown | 
+| Clicking a job opens details | Job details page loads | 
+
+#### Responsive Design
+
+| Device | Screen Size | Expected Result | Status |
+|--------|------------|----------------|--------|
+| Desktop | 1920x1080 | Full layout displayed |
+| Tablet | 768x1024 | Layout adjusts correctly | 
+| Mobile | 375x667 | Layout stacks vertically | 
+
+#### Cross-Browser Compatibility
+
+| Browser | Expected Result | Status |
+|---------|----------------|--------|
+| Google Chrome | App works correctly | 
+| Mozilla Firefox | App works correctly | 
+| Microsoft Edge | App works correctly | 
+| Safari | App works correctly | 
+
+---
+
+### Backend API Test Cases
+
+**Base URL:** `http://localhost:8000`
+
+#### User Endpoints
+
+| Test | Method | Endpoint | Expected Result | Status |
+|------|--------|----------|----------------|--------|
+| Register with valid details | POST | `/api/users/register` | 201 Created | 
+| Register with duplicate email | POST | `/api/users/register` | 400 Bad Request | 
+| Login with valid credentials | POST | `/api/users/login` | 200 OK, token returned | 
+| Login with wrong password | POST | `/api/users/login` | 401 Unauthorized | 
+| Get user profile | GET | `/api/users/:id` | 200 OK, user details | 
+
+#### Job Endpoints
+
+| Test | Method | Endpoint | Expected Result | Status |
+|------|--------|----------|----------------|--------|
+| Get all jobs | GET | `/api/jobs` | 200 OK, array of jobs | 
+| Get single job | GET | `/api/jobs/:id` | 200 OK, job details | 
+| Create a job | POST | `/api/jobs` | 201 Created | 
+| Update a job | PUT | `/api/jobs/:id` | 200 OK, updated job | 
+| Delete a job | DELETE | `/api/jobs/:id` | 200 OK, success message | 
+
+#### Application Endpoints
+
+| Test | Method | Endpoint | Expected Result | Status |
+|------|--------|----------|----------------|--------|
+| Apply for a job | POST | `/api/applications` | 201 Created | 
+| Get applications for a job | GET | `/api/applications/job/:jobId` | 200 OK, array | 
+| Accept/reject application | PUT | `/api/applications/:id` | 200 OK, updated status | 
+
+---
+
+## Bug Reporting
+
+**Bug Title:** Login fails with "Failed to fetch" error
+
+**Page/Endpoint:** Login Page
+
+**Steps to Reproduce:**
+1. Go to https://cos-group-2.vercel.app/login
+2. Enter valid email and password
+3. Click the Login button
+4. See error
+
+**Expected Result:** User is logged in and redirected to dashboard
+
+**Actual Result:** "Failed to fetch" error message displayed, login does not work
+
+**Root Cause:** Frontend .env file was pointing to localhost backend
+instead of the deployed backend URL. Since localhost was not active,
+all API calls were failing.
+
+**Device/Browser:** Chrome, Windows 11
+
+**Severity:** 🔴 Critical
+
+**Status:** ✅ Resolved — Updated REACT_APP_API_URL in frontend .env 
+to point to the correct deployed backend URL
+
+
+
+### Severity Levels
+
+| Level | Description |
+|-------|-------------|
+| 🔴 Critical | App crashes or is completely unusable |
+| 🟠 High | Major feature is broken (e.g. login not working) |
+| 🟡 Medium | Feature works but behaves unexpectedly |
+| 🟢 Low | Minor UI or cosmetic issue |
+
+---
+
+## Resolved Issues
+
+| Issue | Cause | Fix | Status |
+|-------|-------|-----|--------|
+| Login failed with "Failed to fetch" error | Frontend `.env` was pointing to `localhost` backend instead of the deployed backend URL | Updated `REACT_APP_API_URL` in the frontend `.env` to point to the correct deployed backend URL | ✅ Resolved |
+
+---
+
+## Known Issues
+
+| Issue | Page/Endpoint | Severity | Status |
+|-------|--------------|----------|--------|
+| No known issues at this time | - | - | - |
+
+---
+
+## Future Enhancements
+
+- Email notifications for application status updates
+- Improved UI design and accessibility
+- Expanded search and filter functionality
+- Enhanced security with JWT token refresh
+- Expanded Progressive Web App capabilities
+
+---
+
+## Contributors
+
+| Name | Role |
+|------|------|
+| [To be filled] | Frontend Developer |
+| [To be filled] | Backend Developer |
+| [Your Name] | QA / Testing |
+
+---
+
+*Last updated: May 2026*
+
