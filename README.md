@@ -354,9 +354,10 @@ to point to the correct deployed backend URL
 
 | Name | Role |
 |------|------|
-| [To be filled] | Frontend Developer |
-| [To be filled] | Backend Developer |
-| [Your Name] | QA / Testing |
+| [EMMANUEL, Daniel and ARAYELA, Oluwayanmife] | Frontend Developer |
+| [EKE, Chinedum and DUROJAIYE, Muhammad] | Backend Developer |
+| [ONAIBRE, Ryan and EZEANI, Onyinyechukwu] | QA / Testing |
+
 
 ---
 
