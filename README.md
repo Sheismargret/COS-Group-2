@@ -354,9 +354,11 @@ to point to the correct deployed backend URL
 
 | Name | Role |
 |------|------|
-| [EMMANUEL, Daniel and ARAYELA, Oluwayanmife] | Frontend Developer |
+| [OBASI, Ezenwa  and ARAYELA, Oluwayanmife] | Frontend Developer |
 | [EKE, Chinedum and DUROJAIYE, Muhammad] | Backend Developer |
 | [ONAIBRE, Ryan and EZEANI, Onyinyechukwu] | QA / Testing |
+| [OLUSHOLA, Margret] |Team Lead|
+| [EMMANUEL, Daniel] |integration|
 
 
 ---
