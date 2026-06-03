@@ -188,65 +188,65 @@ http://localhost:8000
 
 | Test | Expected Result | Status |
 |------|----------------|--------|
-| App loads without errors | Homepage displays correctly |
-| No blank white screen on load | Content is visible immediately |
-| Browser console has no red errors | Console shows no errors |
-| Page title shows "PAU Connect" | Tab shows correct app name |
+| App loads without errors | Homepage displays correctly |tested works|
+| No blank white screen on load | Content is visible immediately |tested works|
+| Browser console has no red errors | Console shows no errors |tested works|
+| Page title shows "PAU Connect" | Tab shows correct app name |tested works|
 
 #### Navigation
 
 | Test | Expected Result | Status |
 |------|----------------|--------|
-| Navbar is visible on all pages | Navbar shows on every page |
-| Clicking logo goes to home | Redirects to homepage |
-| All navbar links work | Each link goes to correct page |
-| No broken links | No 404 pages |
+| Navbar is visible on all pages | Navbar shows on every page |tested works|
+| Clicking logo goes to home | Redirects to homepage |tested works|
+| All navbar links work | Each link goes to correct page |tested works|
+| No broken links | No 404 pages |tested works|
 
 #### Login Page
 
 | Test | Expected Result | Status |
 |------|----------------|--------|
-| Login form loads correctly | Email and password fields visible |
-| Login with valid credentials | User logged in, redirected to dashboard |
-| Login with wrong password | Error message displayed |
-| Login with empty fields | Validation error shown |
-| Login with invalid email format | Validation error shown |
+| Login form loads correctly | Email and password fields visible |tested works|
+| Login with valid credentials | User logged in, redirected to dashboard |tested works|
+| Login with wrong password | Error message displayed |tested works|
+| Login with empty fields | Validation error shown |tested works|
+| Login with invalid email format | Validation error shown |tested works|
 
 #### Register Page
 
 | Test | Expected Result | Status |
 |------|----------------|--------|
-| Registration form loads correctly | All fields visible |
-| Register with valid details | Account created successfully |
-| Register with missing fields | Validation error shown |
-| Register with existing email | "Email already exists" error shown | 
+| Registration form loads correctly | All fields visible |tested works|
+| Register with valid details | Account created successfully |tested works|
+| Register with missing fields | Validation error shown |tested works|
+| Register with existing email | "Email already exists" error shown |tested works| 
 
 #### Job Listings Page
 
 | Test | Expected Result | Status |
 |------|----------------|--------|
-| Job listings load correctly | List of jobs displayed |
-| Each job card shows correct info | Title, company, location visible | 
-| Search by keyword works | Relevant results shown |
-| Filter by location works | Correct jobs shown | 
-| Clicking a job opens details | Job details page loads | 
+| Job listings load correctly | List of jobs displayed |tested works|
+| Each job card shows correct info | Title, company, location visible | tested works|
+| Search by keyword works | Relevant results shown |tested works|
+| Filter by location works | Correct jobs shown | tested works|
+| Clicking a job opens details | Job details page loads | tested works|
 
 #### Responsive Design
 
 | Device | Screen Size | Expected Result | Status |
 |--------|------------|----------------|--------|
-| Desktop | 1920x1080 | Full layout displayed |
-| Tablet | 768x1024 | Layout adjusts correctly | 
-| Mobile | 375x667 | Layout stacks vertically | 
+| Desktop | 1920x1080 | Full layout displayed |tested works|
+| Tablet | 768x1024 | Layout adjusts correctly | tested works|
+| Mobile | 375x667 | Layout stacks vertically | tested works|
 
 #### Cross-Browser Compatibility
 
 | Browser | Expected Result | Status |
 |---------|----------------|--------|
-| Google Chrome | App works correctly | 
-| Mozilla Firefox | App works correctly | 
-| Microsoft Edge | App works correctly | 
-| Safari | App works correctly | 
+| Google Chrome | App works correctly | tested works|
+| Mozilla Firefox | App works correctly | tested works|
+| Microsoft Edge | App works correctly | tested works|
+| Safari | App works correctly | tested works|
 
 ---
 
@@ -258,29 +258,29 @@ http://localhost:8000
 
 | Test | Method | Endpoint | Expected Result | Status |
 |------|--------|----------|----------------|--------|
-| Register with valid details | POST | `/api/users/register` | 201 Created | 
-| Register with duplicate email | POST | `/api/users/register` | 400 Bad Request | 
+| Register with valid details | POST | `/api/users/register` | 201 Created | tested works|
+| Register with duplicate email | POST | `/api/users/register` | 400 Bad Request | tested works|
 | Login with valid credentials | POST | `/api/users/login` | 200 OK, token returned | 
-| Login with wrong password | POST | `/api/users/login` | 401 Unauthorized | 
-| Get user profile | GET | `/api/users/:id` | 200 OK, user details | 
+| Login with wrong password | POST | `/api/users/login` | 401 Unauthorized | tested works|
+| Get user profile | GET | `/api/users/:id` | 200 OK, user details | tested works|
 
 #### Job Endpoints
 
 | Test | Method | Endpoint | Expected Result | Status |
 |------|--------|----------|----------------|--------|
-| Get all jobs | GET | `/api/jobs` | 200 OK, array of jobs | 
-| Get single job | GET | `/api/jobs/:id` | 200 OK, job details | 
-| Create a job | POST | `/api/jobs` | 201 Created | 
-| Update a job | PUT | `/api/jobs/:id` | 200 OK, updated job | 
-| Delete a job | DELETE | `/api/jobs/:id` | 200 OK, success message | 
+| Get all jobs | GET | `/api/jobs` | 200 OK, array of jobs | tested works|
+| Get single job | GET | `/api/jobs/:id` | 200 OK, job details | tested works|
+| Create a job | POST | `/api/jobs` | 201 Created | tested works|
+| Update a job | PUT | `/api/jobs/:id` | 200 OK, updated job | tested works|
+| Delete a job | DELETE | `/api/jobs/:id` | 200 OK, success message | tested works|
 
 #### Application Endpoints
 
 | Test | Method | Endpoint | Expected Result | Status |
 |------|--------|----------|----------------|--------|
-| Apply for a job | POST | `/api/applications` | 201 Created | 
-| Get applications for a job | GET | `/api/applications/job/:jobId` | 200 OK, array | 
-| Accept/reject application | PUT | `/api/applications/:id` | 200 OK, updated status | 
+| Apply for a job | POST | `/api/applications` | 201 Created | tested works|
+| Get applications for a job | GET | `/api/applications/job/:jobId` | 200 OK, array | tested works|
+| Accept/reject application | PUT | `/api/applications/:id` | 200 OK, updated status | tested works|
 
 ---
 
